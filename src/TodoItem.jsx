@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 TodoItem.propTypes = {
     completed: PropTypes.bool,
-    id: PropTypes.number,
+    id: PropTypes.any,
     title: PropTypes.string,
     toggleTodo: PropTypes.func,
     deleteTodo: PropTypes.func
