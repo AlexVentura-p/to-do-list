@@ -9,8 +9,12 @@ TodoList.propTypes = {
 
 export function TodoList({todos, toggleTodo, deleteTodo}) {
     return (
-        <ul className="list">
-        {todos.length === 0 && "No todos"}
+      <>
+        <div className="font-sans font-medium text-xl">
+            {todos.length === 0 && "No todos"}
+        </div>
+        <ul className="">
+          
         {todos.map(todo => {
           return (
             <TodoItem 
@@ -22,5 +26,6 @@ export function TodoList({todos, toggleTodo, deleteTodo}) {
           )
         })}
       </ul>
+      </>
     );
 }

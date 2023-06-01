@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import "./styles.css"
+//import "./styles.css"
 import { TodoForm } from "./TodoForm";
 import { TodoList } from "./TodoList";
 
@@ -42,10 +42,12 @@ export default function App() {
   }
 
   return (
-    <>
-    <TodoForm onSubmit={addTodo} />
-      <h1 className="header">Todo List</h1>
-      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
-    </>
+    <div className="flex justify-center">
+      <div className=" bg-white shadow-2xl rounded-2xl w-1/2 p-10 h-fit">
+        <TodoForm onSubmit={addTodo} />
+        <h1 className="m-5 text-lg font-extrabold leading-none tracking-tight md:text-xl lg:text-2xl">Todo List</h1>
+        <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+      </div>
+    </div>
   )
 }
